@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: awslx 
+  namespace: test
+spec:
+  containers:
+  - name: awslx
+    image: docker.icsloop.com:5000/amazonlinux 
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+
